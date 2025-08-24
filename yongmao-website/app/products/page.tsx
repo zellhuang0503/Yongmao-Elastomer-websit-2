@@ -103,7 +103,7 @@ export default async function ProductsPage() {
 
                   {/* 發布日期 */}
                   <div className="text-xs text-muted-foreground mt-4">
-                    發布於 {new Date(product.publishedAt).toLocaleDateString('zh-TW')}
+                    發布於 {new Date(product.publishedAt).toISOString().slice(0, 10)}
                   </div>
                 </div>
               </div>
