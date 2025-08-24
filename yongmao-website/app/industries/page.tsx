@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
-export default function ProductsPage() {
+export default function IndustriesPage() {
   useEffect(() => {
     // Intersection Observer for fade-in animation
     const observer = new IntersectionObserver((entries) => {
@@ -30,8 +30,8 @@ export default function ProductsPage() {
         {/* Page Header */}
         <section className="bg-subtle-bg py-12">
           <div className="container mx-auto px-6 text-center section-content">
-            <h1 className="text-4xl font-bold text-primary">產品類別</h1>
-            <p className="text-lg text-gray-600 mt-2">Product Categories</p>
+            <h1 className="text-4xl font-bold text-primary">產業應用</h1>
+            <p className="text-lg text-gray-600 mt-2">Industry Applications</p>
           </div>
         </section>
 
@@ -40,115 +40,137 @@ export default function ProductsPage() {
           <div className="container mx-auto px-6 section-content">
             <div className="max-w-3xl mx-auto text-center">
               <p className="text-lg leading-relaxed text-gray-700">
-                探索我們全面的高品質彈性體產品線。從標準的O型環到完全客製化的解決方案，我們有能力滿足您最多樣化的需求。
+                詠楙的彈性體解決方案，專為滿足各個高要求產業的嚴苛標準而設計。從半導體的潔淨室到航太的極端環境，我們的產品都能提供卓越的性能與可靠性。
               </p>
             </div>
           </div>
         </section>
 
-        {/* Products Grid */}
+        {/* Applications Grid */}
         <section className="py-16 md:py-20 bg-subtle-bg">
           <div className="container mx-auto px-6 section-content">
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-              {/* Card 1: O-Ring */}
+              {/* Card 1: Semiconductor */}
               <div className="bg-white rounded-lg shadow-md overflow-hidden lift-and-shadow flex flex-col">
                 <Image 
-                  src="https://placehold.co/600x400/FDBA74/1F2937?text=O-Ring" 
-                  alt="O型環/墊圈" 
+                  src="https://placehold.co/600x400/FDBA74/1F2937?text=Semiconductor" 
+                  alt="半導體製造業" 
                   width={600}
                   height={400}
                   className="w-full h-48 object-cover"
                 />
                 <div className="p-6 flex-grow flex flex-col">
-                  <h3 className="text-xl font-bold text-primary mb-2">O型環/墊圈</h3>
-                  <p className="text-gray-600 mb-4 flex-grow">提供各種國際標準規格與客製化尺寸，適用於靜態與動態密封。</p>
+                  <h3 className="text-xl font-bold text-primary mb-2">半導體製造業</h3>
+                  <p className="text-gray-600 mb-4 flex-grow">提供耐高溫、高潔淨度的密封件，確保製程環境的穩定與純淨。</p>
                   <Link href="#" className="text-accent font-bold hover:underline arrow-nudge inline-flex items-center mt-auto self-start">
                     查看詳情 <ArrowRight className="w-4 h-4 ml-2 arrow-icon" />
                   </Link>
                 </div>
               </div>
 
-              {/* Card 2: Silicone Seal */}
+              {/* Card 2: Machinery */}
               <div className="bg-white rounded-lg shadow-md overflow-hidden lift-and-shadow flex flex-col">
                 <Image 
-                  src="https://placehold.co/600x400/1F2937/FFFFFF?text=Silicone+Seal" 
-                  alt="矽膠封條" 
+                  src="https://placehold.co/600x400/1F2937/FFFFFF?text=Machinery" 
+                  alt="機械製造業" 
                   width={600}
                   height={400}
                   className="w-full h-48 object-cover"
                 />
                 <div className="p-6 flex-grow flex flex-col">
-                  <h3 className="text-xl font-bold text-primary mb-2">矽膠封條</h3>
-                  <p className="text-gray-600 mb-4 flex-grow">具備高度的密封性與優異的耐候、耐高溫特性。</p>
+                  <h3 className="text-xl font-bold text-primary mb-2">機械製造業</h3>
+                  <p className="text-gray-600 mb-4 flex-grow">耐磨損、耐油的密封解決方案，提升設備運轉效率與壽命。</p>
                   <Link href="#" className="text-accent font-bold hover:underline arrow-nudge inline-flex items-center mt-auto self-start">
                     查看詳情 <ArrowRight className="w-4 h-4 ml-2 arrow-icon" />
                   </Link>
                 </div>
               </div>
 
-              {/* Card 3: Rubber Gasket */}
+              {/* Card 3: Food */}
               <div className="bg-white rounded-lg shadow-md overflow-hidden lift-and-shadow flex flex-col">
                 <Image 
-                  src="https://placehold.co/600x400/1F2937/FFFFFF?text=Rubber+Gasket" 
-                  alt="橡膠墊片" 
+                  src="https://placehold.co/600x400/FDBA74/1F2937?text=Food+Grade" 
+                  alt="食品製造業" 
                   width={600}
                   height={400}
                   className="w-full h-48 object-cover"
                 />
                 <div className="p-6 flex-grow flex flex-col">
-                  <h3 className="text-xl font-bold text-primary mb-2">橡膠墊片</h3>
-                  <p className="text-gray-600 mb-4 flex-grow">優異的減震與密封性能，可依據不同壓力與環境需求客製。</p>
+                  <h3 className="text-xl font-bold text-primary mb-2">食品製造業</h3>
+                  <p className="text-gray-600 mb-4 flex-grow">符合FDA標準的無毒矽膠材料，確保食品生產過程的安全衛生。</p>
                   <Link href="#" className="text-accent font-bold hover:underline arrow-nudge inline-flex items-center mt-auto self-start">
                     查看詳情 <ArrowRight className="w-4 h-4 ml-2 arrow-icon" />
                   </Link>
                 </div>
               </div>
 
-              {/* Card 4: Silicone Sheet */}
+              {/* Card 4: Sports */}
               <div className="bg-white rounded-lg shadow-md overflow-hidden lift-and-shadow flex flex-col">
                 <Image 
-                  src="https://placehold.co/600x400/FDBA74/1F2937?text=Silicone+Sheet" 
-                  alt="矽膠片" 
+                  src="https://placehold.co/600x400/1F2937/FFFFFF?text=Sports" 
+                  alt="運動器材" 
                   width={600}
                   height={400}
                   className="w-full h-48 object-cover"
                 />
                 <div className="p-6 flex-grow flex flex-col">
-                  <h3 className="text-xl font-bold text-primary mb-2">矽膠片</h3>
-                  <p className="text-gray-600 mb-4 flex-grow">提供多種厚度、硬度與顏色選擇，適用於絕緣、緩衝等多種應用。</p>
+                  <h3 className="text-xl font-bold text-primary mb-2">運動器材</h3>
+                  <p className="text-gray-600 mb-4 flex-grow">高回彈、耐疲勞的橡膠零件，提升運動器材的性能與耐用度。</p>
                   <Link href="#" className="text-accent font-bold hover:underline arrow-nudge inline-flex items-center mt-auto self-start">
                     查看詳情 <ArrowRight className="w-4 h-4 ml-2 arrow-icon" />
                   </Link>
                 </div>
               </div>
+
+              {/* Card 5: Aerospace */}
+              <div className="bg-white rounded-lg shadow-md overflow-hidden lift-and-shadow flex flex-col">
+                <Image 
+                  src="https://placehold.co/600x400/FDBA74/1F2937?text=Aerospace" 
+                  alt="航太配件" 
+                  width={600}
+                  height={400}
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-6 flex-grow flex flex-col">
+                  <h3 className="text-xl font-bold text-primary mb-2">航太配件</h3>
+                  <p className="text-gray-600 mb-4 flex-grow">能承受極端溫差與化學腐蝕的材料，滿足最嚴苛的航太應用標準。</p>
+                  <Link href="#" className="text-accent font-bold hover:underline arrow-nudge inline-flex items-center mt-auto self-start">
+                    查看詳情 <ArrowRight className="w-4 h-4 ml-2 arrow-icon" />
+                  </Link>
+                </div>
+              </div>
+
+              {/* Card 6: Music */}
+              <div className="bg-white rounded-lg shadow-md overflow-hidden lift-and-shadow flex flex-col">
+                <Image 
+                  src="https://placehold.co/600x400/1F2937/FFFFFF?text=Music" 
+                  alt="樂器配件" 
+                  width={600}
+                  height={400}
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-6 flex-grow flex flex-col">
+                  <h3 className="text-xl font-bold text-primary mb-2">樂器配件</h3>
+                  <p className="text-gray-600 mb-4 flex-grow">提供絕佳減震與手感的精密零件，提升樂器演奏的品質。</p>
+                  <Link href="#" className="text-accent font-bold hover:underline arrow-nudge inline-flex items-center mt-auto self-start">
+                    查看詳情 <ArrowRight className="w-4 h-4 ml-2 arrow-icon" />
+                  </Link>
+                </div>
+              </div>
+
             </div>
-
-            {/* Featured Card: Customization */}
-            <div className="mt-12 bg-primary rounded-lg shadow-xl overflow-hidden">
-              <div className="grid md:grid-cols-2 items-center">
-                <div className="p-8 md:p-12 order-2 md:order-1">
-                  <h3 className="text-2xl font-bold text-white mb-3">客製化矽橡膠</h3>
-                  <p className="text-gray-300 mb-6">無論您的需求多麼特殊，我們的工程團隊都能從材料開發到成品製造，為您量身打造專屬的解決方案。我們樂於挑戰，將您的概念化為現實。</p>
-                  <Link href="/contact" className="bg-accent text-white font-bold py-3 px-6 rounded-lg btn-press inline-flex items-center">
-                    聯絡我們討論需求 <ArrowRight className="w-4 h-4 ml-2" />
-                  </Link>
-                </div>
-                <div className="order-1 md:order-2 h-full">
-                  <Image 
-                    src="https://placehold.co/800x600/F97316/FFFFFF?text=Custom+Solution" 
-                    alt="客製化解決方案" 
-                    width={800}
-                    height={600}
-                    className="w-full h-full object-cover min-h-[250px]"
-                  />
-                </div>
-              </div>
-            </div>
-
           </div>
         </section>
 
+        {/* Final CTA Section */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-6 text-center section-content">
+            <h2 className="text-3xl font-bold text-primary mb-4">準備好開始您的專案了嗎？</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">立即聯絡我們的技術團隊，取得專業諮詢與解決方案。</p>
+            <Link href="/contact" className="bg-accent text-white font-bold py-3 px-8 rounded-lg btn-press">立即諮詢</Link>
+          </div>
+        </section>
       </main>
 
       {/* Footer */}
