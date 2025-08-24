@@ -11,9 +11,18 @@ yongmao-site/packages/studio/.sanity
 *.log
 
 # Next.js
+# Monorepo legacy paths (kept for reference)
 yongmao-site/packages/web/.next/
 yongmao-site/packages/web/out/
 yongmao-site/packages/web/.vercel
+
+# Current project paths
+yongmao-website/.next/
+yongmao-website/out/
+yongmao-website/.vercel/
+.next/
+out/
+.vercel/
 
 # Environment variables
 .env

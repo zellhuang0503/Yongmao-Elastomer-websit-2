@@ -1,0 +1,275 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>產業應用 - 詠楙企業</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="theme_yongmao_1.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <style>
+        body {
+            --primary: #0033A0;
+            --secondary: #4A4A4A;
+            --accent: #00AEEF;
+            --background: #FFFFFF;
+            --subtle-bg: #F5F7FA;
+        }
+        .font-noto {
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--primary);
+        }
+        .dropdown .dropdown-menu {
+            display: none;
+            transition: all 0.3s ease-out;
+        }
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in-up {
+            animation: fadeInUp 0.7s ease-out forwards;
+        }
+        .section-content {
+            opacity: 0;
+        }
+        .lift-and-shadow {
+            transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+        }
+        .lift-and-shadow:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+        .arrow-nudge:hover .arrow-icon {
+            transform: translateX(4px);
+        }
+        .arrow-icon {
+            transition: transform 0.2s ease-in-out;
+        }
+        .btn-press {
+            transition: transform 0.1s ease-out, background-color 0.2s ease-out;
+        }
+        .btn-press:hover {
+            filter: brightness(110%);
+        }
+        .btn-press:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body class="font-noto bg-background text-secondary">
+
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-200">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <a href="homepage_yongmao_1.html"><img src="https://placehold.co/120x40/0033A0/FFFFFF?text=Yongmao" alt="詠楙企業 Logo" class="h-10"></a>
+                </div>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="about_yongmao_1.html" class="text-base font-medium text-gray-600 hover:text-primary">關於詠楙</a>
+                    <div class="dropdown relative">
+                        <a href="industry_applications_1.html" class="text-base font-bold text-primary flex items-center">產業應用 <i data-lucide="chevron-down" class="w-4 h-4 ml-1"></i></a>
+                        <div class="dropdown-menu absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-20">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">機械製造業</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">運動器材</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">食品製造業</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">半導體製造業</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">航太配件</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">樂器配件</a>
+                        </div>
+                    </div>
+                    <div class="dropdown relative">
+                        <a href="#" class="text-base font-medium text-gray-600 hover:text-primary flex items-center">產品類別 <i data-lucide="chevron-down" class="w-4 h-4 ml-1"></i></a>
+                        <div class="dropdown-menu absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-20">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">O型環/墊圈</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">矽膠封條</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">橡膠墊片</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">矽膠片</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">客製化矽橡膠</a>
+                        </div>
+                    </div>
+                    <a href="#" class="text-base font-medium text-gray-600 hover:text-primary">彈性體介紹</a>
+                    <a href="#" class="text-base font-medium text-gray-600 hover:text-primary">聯絡我們</a>
+                </nav>
+                <div class="md:hidden">
+                    <button><i data-lucide="menu" class="w-6 h-6"></i></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Header -->
+        <section class="bg-subtle-bg py-12">
+            <div class="container mx-auto px-6 text-center section-content">
+                <h1 class="text-4xl font-bold">產業應用</h1>
+                <p class="text-lg text-secondary mt-2">Industry Applications</p>
+            </div>
+        </section>
+
+        <!-- Intro Text -->
+        <section class="py-16 md:py-20">
+            <div class="container mx-auto px-6 section-content">
+                <div class="max-w-3xl mx-auto text-center">
+                    <p class="text-lg leading-relaxed text-gray-700">
+                        詠楙的彈性體解決方案，專為滿足各個高要求產業的嚴苛標準而設計。從半導體的潔淨室到航太的極端環境，我們的產品都能提供卓越的性能與可靠性。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Applications Grid -->
+        <section class="py-16 md:py-20 bg-subtle-bg">
+            <div class="container mx-auto px-6 section-content">
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Card 1: Semiconductor -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden lift-and-shadow flex flex-col">
+                        <img src="https://placehold.co/600x400/0033A0/FFFFFF?text=Semiconductor" alt="半導體製造業" class="w-full h-48 object-cover">
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h3 class="text-xl font-bold text-primary mb-2">半導體製造業</h3>
+                            <p class="text-gray-600 mb-4 flex-grow">提供耐高溫、高潔淨度的密封件，確保製程環境的穩定與純淨。</p>
+                            <a href="#" class="text-accent font-bold hover:underline arrow-nudge inline-flex items-center mt-auto">
+                                查看詳情 <i data-lucide="arrow-right" class="w-4 h-4 ml-2 arrow-icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Machinery -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden lift-and-shadow flex flex-col">
+                        <img src="https://placehold.co/600x400/4A4A4A/FFFFFF?text=Machinery" alt="機械製造業" class="w-full h-48 object-cover">
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h3 class="text-xl font-bold text-primary mb-2">機械製造業</h3>
+                            <p class="text-gray-600 mb-4 flex-grow">耐磨損、耐油的密封解決方案，提升設備運轉效率與壽命。</p>
+                            <a href="#" class="text-accent font-bold hover:underline arrow-nudge inline-flex items-center mt-auto">
+                                查看詳情 <i data-lucide="arrow-right" class="w-4 h-4 ml-2 arrow-icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Food -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden lift-and-shadow flex flex-col">
+                        <img src="https://placehold.co/600x400/00AEEF/FFFFFF?text=Food+Grade" alt="食品製造業" class="w-full h-48 object-cover">
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h3 class="text-xl font-bold text-primary mb-2">食品製造業</h3>
+                            <p class="text-gray-600 mb-4 flex-grow">符合FDA標準的無毒矽膠材料，確保食品生產過程的安全衛生。</p>
+                            <a href="#" class="text-accent font-bold hover:underline arrow-nudge inline-flex items-center mt-auto">
+                                查看詳情 <i data-lucide="arrow-right" class="w-4 h-4 ml-2 arrow-icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Sports -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden lift-and-shadow flex flex-col">
+                        <img src="https://placehold.co/600x400/E2E8F0/4A4A4A?text=Sports" alt="運動器材" class="w-full h-48 object-cover">
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h3 class="text-xl font-bold text-primary mb-2">運動器材</h3>
+                            <p class="text-gray-600 mb-4 flex-grow">高回彈、耐疲勞的橡膠零件，提升運動器材的性能與耐用度。</p>
+                            <a href="#" class="text-accent font-bold hover:underline arrow-nudge inline-flex items-center mt-auto">
+                                查看詳情 <i data-lucide="arrow-right" class="w-4 h-4 ml-2 arrow-icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 5: Aerospace -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden lift-and-shadow flex flex-col">
+                        <img src="https://placehold.co/600x400/1E293B/FFFFFF?text=Aerospace" alt="航太配件" class="w-full h-48 object-cover">
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h3 class="text-xl font-bold text-primary mb-2">航太配件</h3>
+                            <p class="text-gray-600 mb-4 flex-grow">能承受極端溫差與化學腐蝕的材料，滿足最嚴苛的航太應用標準。</p>
+                            <a href="#" class="text-accent font-bold hover:underline arrow-nudge inline-flex items-center mt-auto">
+                                查看詳情 <i data-lucide="arrow-right" class="w-4 h-4 ml-2 arrow-icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 6: Music -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden lift-and-shadow flex flex-col">
+                        <img src="https://placehold.co/600x400/94A3B8/FFFFFF?text=Music" alt="樂器配件" class="w-full h-48 object-cover">
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h3 class="text-xl font-bold text-primary mb-2">樂器配件</h3>
+                            <p class="text-gray-600 mb-4 flex-grow">提供絕佳減震與手感的精密零件，提升樂器演奏的品質。</p>
+                            <a href="#" class="text-accent font-bold hover:underline arrow-nudge inline-flex items-center mt-auto">
+                                查看詳情 <i data-lucide="arrow-right" class="w-4 h-4 ml-2 arrow-icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6 text-center section-content">
+                <h2 class="text-3xl font-bold text-primary mb-4">準備好開始您的專案了嗎？</h2>
+                <p class="text-lg text-secondary max-w-2xl mx-auto mb-8">立即聯絡我們的技術團隊，取得專業諮詢與解決方案。</p>
+                <a href="#" class="bg-accent text-white font-bold py-3 px-8 rounded-lg btn-press">立即諮詢</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">關於詠楙</h4>
+                    <p class="text-gray-400 text-sm">提供最高品質的客製化彈性體解決方案，是您最信賴的合作夥伴。</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">網站導覽</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="about_yongmao_1.html" class="text-gray-400 hover:text-white">關於我們</a></li>
+                        <li><a href="industry_applications_1.html" class="text-gray-400 hover:text-white">產業應用</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">產品類別</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">彈性體介紹</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">聯絡資訊</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li class="flex items-start"><i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-1"></i><span>公司地址: 您的地址</span></li>
+                        <li class="flex items-start"><i data-lucide="phone" class="w-4 h-4 mr-2 mt-1"></i><span>電話: (02) 1234-5678</span></li>
+                        <li class="flex items-start"><i data-lucide="mail" class="w-4 h-4 mr-2 mt-1"></i><span>Email: service@yongmao.com.tw</span></li>
+                    </ul>
+                </div>
+                <div>
+                    <a href="homepage_yongmao_1.html"><img src="https://placehold.co/150x50/FFFFFF/0033A0?text=Yongmao+Logo" alt="詠楙 Logo" class="h-12"></a>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center text-sm text-gray-500">
+                <p>&copy; 2024 詠楙企業股份有限公司. All Rights Reserved. | <a href="#" class="hover:underline">隱私權政策</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        // Simple Intersection Observer for fade-in animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in-up');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.section-content').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>

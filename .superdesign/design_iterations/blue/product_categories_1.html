@@ -1,0 +1,267 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>產品類別 - 詠楙企業</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="theme_yongmao_1.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <style>
+        body {
+            --primary: #0033A0;
+            --secondary: #4A4A4A;
+            --accent: #00AEEF;
+            --background: #FFFFFF;
+            --subtle-bg: #F5F7FA;
+        }
+        .font-noto {
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--primary);
+        }
+        .dropdown .dropdown-menu {
+            display: none;
+            transition: all 0.3s ease-out;
+        }
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in-up {
+            animation: fadeInUp 0.7s ease-out forwards;
+        }
+        .section-content {
+            opacity: 0;
+        }
+        .lift-and-shadow {
+            transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+        }
+        .lift-and-shadow:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+        .arrow-nudge:hover .arrow-icon {
+            transform: translateX(4px);
+        }
+        .arrow-icon {
+            transition: transform 0.2s ease-in-out;
+        }
+        .btn-press {
+            transition: transform 0.1s ease-out, background-color 0.2s ease-out;
+        }
+        .btn-press:hover {
+            filter: brightness(110%);
+        }
+        .btn-press:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body class="font-noto bg-background text-secondary">
+
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-200">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <a href="homepage_yongmao_1.html"><img src="https://placehold.co/120x40/0033A0/FFFFFF?text=Yongmao" alt="詠楙企業 Logo" class="h-10"></a>
+                </div>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="about_yongmao_1.html" class="text-base font-medium text-gray-600 hover:text-primary">關於詠楙</a>
+                    <div class="dropdown relative">
+                        <a href="industry_applications_1.html" class="text-base font-medium text-gray-600 hover:text-primary flex items-center">產業應用 <i data-lucide="chevron-down" class="w-4 h-4 ml-1"></i></a>
+                        <div class="dropdown-menu absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-20">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">機械製造業</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">運動器材</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">食品製造業</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">半導體製造業</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">航太配件</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">樂器配件</a>
+                        </div>
+                    </div>
+                    <div class="dropdown relative">
+                        <a href="product_categories_1.html" class="text-base font-bold text-primary flex items-center">產品類別 <i data-lucide="chevron-down" class="w-4 h-4 ml-1"></i></a>
+                        <div class="dropdown-menu absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-20">
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">O型環/墊圈</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">矽膠封條</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">橡膠墊片</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">矽膠片</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary">客製化矽橡膠</a>
+                        </div>
+                    </div>
+                    <a href="#" class="text-base font-medium text-gray-600 hover:text-primary">彈性體介紹</a>
+                    <a href="#" class="text-base font-medium text-gray-600 hover:text-primary">聯絡我們</a>
+                </nav>
+                <div class="md:hidden">
+                    <button><i data-lucide="menu" class="w-6 h-6"></i></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Header -->
+        <section class="bg-subtle-bg py-12">
+            <div class="container mx-auto px-6 text-center section-content">
+                <h1 class="text-4xl font-bold">產品類別</h1>
+                <p class="text-lg text-secondary mt-2">Product Categories</p>
+            </div>
+        </section>
+
+        <!-- Intro Text -->
+        <section class="py-16 md:py-20">
+            <div class="container mx-auto px-6 section-content">
+                <div class="max-w-3xl mx-auto text-center">
+                    <p class="text-lg leading-relaxed text-gray-700">
+                        探索我們全面的高品質彈性體產品線。從標準的O型環到完全客製化的解決方案，我們有能力滿足您最多樣化的需求。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Grid -->
+        <section class="py-16 md:py-20 bg-subtle-bg">
+            <div class="container mx-auto px-6 section-content">
+                <div class="grid md:grid-cols-2 gap-8">
+
+                    <!-- Card 1: O-Ring -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden lift-and-shadow flex flex-col">
+                        <img src="https://placehold.co/600x400/E2E8F0/4A4A4A?text=O-Ring" alt="O型環/墊圈" class="w-full h-48 object-cover">
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h3 class="text-xl font-bold text-primary mb-2">O型環/墊圈</h3>
+                            <p class="text-gray-600 mb-4 flex-grow">提供各種國際標準規格與客製化尺寸，適用於靜態與動態密封。</p>
+                            <a href="#" class="text-accent font-bold hover:underline arrow-nudge inline-flex items-center mt-auto">
+                                查看詳情 <i data-lucide="arrow-right" class="w-4 h-4 ml-2 arrow-icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Silicone Seal -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden lift-and-shadow flex flex-col">
+                        <img src="https://placehold.co/600x400/E2E8F0/4A4A4A?text=Silicone+Seal" alt="矽膠封條" class="w-full h-48 object-cover">
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h3 class="text-xl font-bold text-primary mb-2">矽膠封條</h3>
+                            <p class="text-gray-600 mb-4 flex-grow">具備高度的密封性與優異的耐候、耐高溫特性。</p>
+                            <a href="#" class="text-accent font-bold hover:underline arrow-nudge inline-flex items-center mt-auto">
+                                查看詳情 <i data-lucide="arrow-right" class="w-4 h-4 ml-2 arrow-icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Rubber Gasket -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden lift-and-shadow flex flex-col">
+                        <img src="https://placehold.co/600x400/E2E8F0/4A4A4A?text=Rubber+Gasket" alt="橡膠墊片" class="w-full h-48 object-cover">
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h3 class="text-xl font-bold text-primary mb-2">橡膠墊片</h3>
+                            <p class="text-gray-600 mb-4 flex-grow">優異的減震與密封性能，可依據不同壓力與環境需求客製。</p>
+                            <a href="#" class="text-accent font-bold hover:underline arrow-nudge inline-flex items-center mt-auto">
+                                查看詳情 <i data-lucide="arrow-right" class="w-4 h-4 ml-2 arrow-icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Silicone Sheet -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden lift-and-shadow flex flex-col">
+                        <img src="https://placehold.co/600x400/E2E8F0/4A4A4A?text=Silicone+Sheet" alt="矽膠片" class="w-full h-48 object-cover">
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h3 class="text-xl font-bold text-primary mb-2">矽膠片</h3>
+                            <p class="text-gray-600 mb-4 flex-grow">提供多種厚度、硬度與顏色選擇，適用於絕緣、緩衝等多種應用。</p>
+                            <a href="#" class="text-accent font-bold hover:underline arrow-nudge inline-flex items-center mt-auto">
+                                查看詳情 <i data-lucide="arrow-right" class="w-4 h-4 ml-2 arrow-icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Featured Card: Customization -->
+                <div class="mt-12 bg-white rounded-lg shadow-lg overflow-hidden lift-and-shadow">
+                    <div class="grid md:grid-cols-2 items-center">
+                        <div class="p-8 md:p-12">
+                            <h3 class="text-2xl font-bold text-primary mb-3">客製化矽橡膠</h3>
+                            <p class="text-gray-600 mb-6">無論您的需求多麼特殊，我們的工程團隊都能從材料開發到成品製造，為您量身打造專屬的解決方案。我們樂於挑戰，將您的概念化為現實。</p>
+                            <a href="#" class="bg-primary text-white font-bold py-3 px-6 rounded-lg btn-press inline-flex items-center">
+                                聯絡我們討論需求 <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                            </a>
+                        </div>
+                        <div class="hidden md:block">
+                            <img src="https://placehold.co/800x600/0033A0/FFFFFF?text=Custom+Solution" alt="客製化解決方案" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6 text-center section-content">
+                <h2 class="text-3xl font-bold text-primary mb-4">準備好開始您的專案了嗎？</h2>
+                <p class="text-lg text-secondary max-w-2xl mx-auto mb-8">立即聯絡我們的技術團隊，取得專業諮詢與解決方案。</p>
+                <a href="#" class="bg-accent text-white font-bold py-3 px-8 rounded-lg btn-press">立即諮詢</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">關於詠楙</h4>
+                    <p class="text-gray-400 text-sm">提供最高品質的客製化彈性體解決方案，是您最信賴的合作夥伴。</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">網站導覽</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="about_yongmao_1.html" class="text-gray-400 hover:text-white">關於我們</a></li>
+                        <li><a href="industry_applications_1.html" class="text-gray-400 hover:text-white">產業應用</a></li>
+                        <li><a href="product_categories_1.html" class="text-gray-400 hover:text-white">產品類別</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">彈性體介紹</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">聯絡資訊</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li class="flex items-start"><i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-1"></i><span>公司地址: 您的地址</span></li>
+                        <li class="flex items-start"><i data-lucide="phone" class="w-4 h-4 mr-2 mt-1"></i><span>電話: (02) 1234-5678</span></li>
+                        <li class="flex items-start"><i data-lucide="mail" class="w-4 h-4 mr-2 mt-1"></i><span>Email: service@yongmao.com.tw</span></li>
+                    </ul>
+                </div>
+                <div>
+                    <a href="homepage_yongmao_1.html"><img src="https://placehold.co/150x50/FFFFFF/0033A0?text=Yongmao+Logo" alt="詠楙 Logo" class="h-12"></a>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center text-sm text-gray-500">
+                <p>&copy; 2024 詠楙企業股份有限公司. All Rights Reserved. | <a href="#" class="hover:underline">隱私權政策</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        // Simple Intersection Observer for fade-in animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in-up');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.section-content').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,221 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>關於詠楙 - 詠楙企業</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="theme_yongmao_2.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <style>
+        /* Using CSS variables defined in theme_yongmao_2.css */
+        .font-noto { font-family: 'Noto Sans TC', sans-serif; }
+        .bg-primary { background-color: var(--primary); }
+        .text-primary { color: var(--primary); }
+        .text-primary-foreground { color: var(--primary-foreground); }
+        .bg-accent { background-color: var(--accent); }
+        .text-accent { color: var(--accent); }
+        .bg-subtle-bg { background-color: var(--secondary); }
+        .ring-accent { ring-color: var(--accent); }
+        .border-accent { border-color: var(--accent); }
+
+        .btn-press { transition: transform 0.1s ease-out, filter 0.2s ease-out; }
+        .btn-press:hover { filter: brightness(110%); }
+        .btn-press:active { transform: scale(0.98); filter: brightness(100%); }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in-up { animation: fadeInUp 0.7s ease-out forwards; }
+        .section-content { opacity: 0; }
+
+        /* Timeline Styles */
+        .timeline-item { position: relative; padding-bottom: 2.5rem; padding-left: 2.5rem; }
+        .timeline-item:last-child { padding-bottom: 0; }
+        .timeline-item::before { content: ''; position: absolute; left: 0.4375rem; top: 0.5rem; width: 2px; height: 100%; background-color: #e5e7eb; }
+        .timeline-dot { position: absolute; left: 0; top: 0.375rem; width: 1rem; height: 1rem; border-radius: 9999px; background-color: var(--accent); border: 2px solid var(--background); }
+    </style>
+</head>
+<body class="font-noto bg-white text-gray-700">
+
+    <!-- Header -->
+    <header class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-gray-200">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="homepage_orange_1.html">
+                    <img src="../logo/YM-logo-M-noBG-BlackWords.png" alt="詠楙企業 Logo" class="h-12">
+                </a>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="about_orange_1.html" class="text-base font-bold text-accent">關於詠楙</a>
+                    <a href="#" class="text-base font-medium text-gray-600 hover:text-accent">產業應用</a>
+                    <a href="#" class="text-base font-medium text-gray-600 hover:text-accent">產品類別</a>
+                    <a href="#" class="text-base font-medium text-gray-600 hover:text-accent">彈性體介紹</a>
+                    <a href="#" class="bg-accent text-white font-bold py-2 px-5 rounded-md btn-press">聯絡我們</a>
+                </nav>
+                <div class="md:hidden">
+                    <button><i data-lucide="menu" class="w-6 h-6 text-primary"></i></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Header -->
+        <section class="bg-subtle-bg py-12">
+            <div class="container mx-auto px-6 text-center section-content">
+                <h1 class="text-4xl font-bold text-primary">關於我們</h1>
+                <p class="text-lg text-gray-600 mt-2">About Us</p>
+            </div>
+        </section>
+
+        <!-- Our Mission Section -->
+        <section class="py-16 md:py-20">
+            <div class="container mx-auto px-6 section-content">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 md:order-1">
+                        <h2 class="text-3xl font-bold text-primary mb-4">我們的使命</h2>
+                        <p class="text-lg leading-relaxed text-gray-700">
+                            詠楙企業致力於透過不斷的技術創新與對品質的堅持，為全球客戶提供最可靠的彈性體解決方案。我們的使命是成為您在關鍵應用領域中，不可或缺的合作夥伴。
+                        </p>
+                    </div>
+                    <div class="order-1 md:order-2">
+                        <img src="https://placehold.co/600x400/FDBA74/1F2937?text=Factory" alt="公司/工廠圖片" class="rounded-lg shadow-lg w-full">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Section -->
+        <section class="py-16 md:py-20 bg-subtle-bg">
+            <div class="container mx-auto px-6 section-content">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-primary">發展歷程</h2>
+                    <p class="text-md text-gray-600 mt-2">見證我們的成長與承諾</p>
+                </div>
+                <div class="max-w-3xl mx-auto">
+                    <div class="relative">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <h3 class="text-xl font-semibold text-primary">2005年 - 公司成立</h3>
+                            <p class="text-gray-600 mt-1">詠楙企業於台灣成立，專注於基礎橡膠製品的生產。</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <h3 class="text-xl font-semibold text-primary">2012年 - 導入ISO 9001認證</h3>
+                            <p class="text-gray-600 mt-1">全面提升品質管理系統，確保產品與服務的一致性與可靠性。</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <h3 class="text-xl font-semibold text-primary">2018年 - 擴建研發中心</h3>
+                            <p class="text-gray-600 mt-1">投入大量資源於材料科學研究，開始提供高階客製化解決方案。</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <h3 class="text-xl font-semibold text-primary">2025年 - 成為業界領導者</h3>
+                            <p class="text-gray-600 mt-1">在半導體與航太領域取得關鍵突破，成為亞洲領先的彈性體供應商。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="py-16 md:py-20">
+            <div class="container mx-auto px-6 section-content">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-primary">我們的專業團隊</h2>
+                    <p class="text-md text-gray-600 mt-2">以系統化的專業分工，為您的專案護航</p>
+                </div>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
+                    <div class="p-6">
+                        <i data-lucide="beaker" class="w-12 h-12 mx-auto text-accent mb-4"></i>
+                        <h3 class="text-xl font-semibold text-primary mb-2">核心研發團隊</h3>
+                        <p class="text-gray-600">持續投入材料科學研究，不斷創新，以應對最前沿的技術挑戰。</p>
+                    </div>
+                    <div class="p-6">
+                        <i data-lucide="shield-check" class="w-12 h-12 mx-auto text-accent mb-4"></i>
+                        <h3 class="text-xl font-semibold text-primary mb-2">嚴格品保團隊</h3>
+                        <p class="text-gray-600">從原料到成品，透過精密儀器與標準化流程，確保每一件產品的最高品質。</p>
+                    </div>
+                    <div class="p-6">
+                        <i data-lucide="users" class="w-12 h-12 mx-auto text-accent mb-4"></i>
+                        <h3 class="text-xl font-semibold text-primary mb-2">客戶技術支援</h3>
+                        <p class="text-gray-600">由資深工程師組成，提供專業諮詢，協助客戶解決應用上的任何問題。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section class="py-20 bg-subtle-bg">
+            <div class="container mx-auto px-6 text-center section-content">
+                <h2 class="text-3xl font-bold text-primary mb-4">準備好開始您的專案了嗎？</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8">立即聯絡我們的技術團隊，取得專業諮詢與解決方案。</p>
+                <a href="#" class="bg-accent text-white font-bold py-3 px-8 rounded-lg btn-press">立即諮詢</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <img src="../logo/YM-logo-M-noBG-WhiteWords.png" alt="詠楙企業 Logo" class="h-12 mb-4">
+                    <p class="text-gray-400 text-sm">提供最高品質的客製化彈性體解決方案，是您最信賴的合作夥伴。</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">網站導覽</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="about_orange_1.html" class="text-gray-400 hover:text-white">關於我們</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">產業應用</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">產品類別</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">彈性體介紹</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">聯絡資訊</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li class="flex items-start"><i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-1"></i><span>242新北市新莊區福營路227巷8號</span></li>
+                        <li class="flex items-start"><i data-lucide="phone" class="w-4 h-4 mr-2 mt-1"></i><span>(02) 2908-8686</span></li>
+                        <li class="flex items-start"><i data-lucide="mail" class="w-4 h-4 mr-2 mt-1"></i><span>service@yongmao.com.tw</span></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">保持聯繫</h4>
+                    <p class="text-gray-400 text-sm mb-2">訂閱以獲取最新的技術文章與資訊。</p>
+                    <div class="flex">
+                        <input type="email" placeholder="您的電子郵件" class="bg-gray-700 text-white px-3 py-2 rounded-l-md focus:outline-none w-full">
+                        <button class="bg-accent text-white px-4 rounded-r-md btn-press">訂閱</button>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center text-sm text-gray-500">
+                <p>&copy; 2024 詠楙企業股份有限公司. All Rights Reserved. | <a href="#" class="hover:underline">隱私權政策</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in-up');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.section-content').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>

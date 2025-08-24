@@ -30,8 +30,8 @@ export default function Navigation() {
                 href={item.href}
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                   pathname === item.href
-                    ? 'text-blue-600 bg-blue-50'
-                    : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+                    ? 'text-[var(--accent)] bg-orange-50'
+                    : 'text-gray-700 hover:text-[var(--accent)] hover:bg-[var(--secondary)]'
                 }`}
               >
                 {item.label}
@@ -41,7 +41,7 @@ export default function Navigation() {
 
           {/* Mobile menu button */}
           <div className="md:hidden">
-            <button className="text-gray-700 hover:text-blue-600">
+            <button className="text-gray-700 hover:text-[var(--accent)]">
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>

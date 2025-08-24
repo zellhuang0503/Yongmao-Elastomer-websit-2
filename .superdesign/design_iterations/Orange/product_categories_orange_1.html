@@ -1,0 +1,216 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>產品類別 - 詠楙企業</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="theme_yongmao_2.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <style>
+        /* Using CSS variables defined in theme_yongmao_2.css */
+        .font-noto { font-family: 'Noto Sans TC', sans-serif; }
+        .bg-primary { background-color: var(--primary); }
+        .text-primary { color: var(--primary); }
+        .bg-accent { background-color: var(--accent); }
+        .text-accent { color: var(--accent); }
+        .bg-subtle-bg { background-color: var(--secondary); }
+
+        .lift-and-shadow { transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out; }
+        .lift-and-shadow:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+        
+        .arrow-nudge:hover .arrow-icon { transform: translateX(4px); }
+        .arrow-icon { transition: transform 0.2s ease-in-out; }
+
+        .btn-press { transition: transform 0.1s ease-out, filter 0.2s ease-out; }
+        .btn-press:hover { filter: brightness(110%); }
+        .btn-press:active { transform: scale(0.98); filter: brightness(100%); }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in-up { animation: fadeInUp 0.7s ease-out forwards; }
+        .section-content { opacity: 0; }
+    </style>
+</head>
+<body class="font-noto bg-white text-gray-700">
+
+    <!-- Header -->
+    <header class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-gray-200">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="homepage_orange_1.html">
+                    <img src="../logo/YM-logo-M-noBG-BlackWords.png" alt="詠楙企業 Logo" class="h-12">
+                </a>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="about_orange_1.html" class="text-base font-medium text-gray-600 hover:text-accent">關於詠楙</a>
+                    <a href="industry_applications_orange_1.html" class="text-base font-medium text-gray-600 hover:text-accent">產業應用</a>
+                    <a href="product_categories_orange_1.html" class="text-base font-bold text-accent">產品類別</a>
+                    <a href="#" class="text-base font-medium text-gray-600 hover:text-accent">彈性體介紹</a>
+                    <a href="#" class="bg-accent text-white font-bold py-2 px-5 rounded-md btn-press">聯絡我們</a>
+                </nav>
+                <div class="md:hidden">
+                    <button><i data-lucide="menu" class="w-6 h-6 text-primary"></i></button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Header -->
+        <section class="bg-subtle-bg py-12">
+            <div class="container mx-auto px-6 text-center section-content">
+                <h1 class="text-4xl font-bold text-primary">產品類別</h1>
+                <p class="text-lg text-gray-600 mt-2">Product Categories</p>
+            </div>
+        </section>
+
+        <!-- Intro Text -->
+        <section class="py-16 md:py-20">
+            <div class="container mx-auto px-6 section-content">
+                <div class="max-w-3xl mx-auto text-center">
+                    <p class="text-lg leading-relaxed text-gray-700">
+                        探索我們全面的高品質彈性體產品線。從標準的O型環到完全客製化的解決方案，我們有能力滿足您最多樣化的需求。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Grid -->
+        <section class="py-16 md:py-20 bg-subtle-bg">
+            <div class="container mx-auto px-6 section-content">
+                <div class="grid md:grid-cols-2 gap-8">
+
+                    <!-- Card 1: O-Ring -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden lift-and-shadow flex flex-col">
+                        <img src="https://placehold.co/600x400/FDBA74/1F2937?text=O-Ring" alt="O型環/墊圈" class="w-full h-48 object-cover">
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h3 class="text-xl font-bold text-primary mb-2">O型環/墊圈</h3>
+                            <p class="text-gray-600 mb-4 flex-grow">提供各種國際標準規格與客製化尺寸，適用於靜態與動態密封。</p>
+                            <a href="#" class="text-accent font-bold hover:underline arrow-nudge inline-flex items-center mt-auto self-start">
+                                查看詳情 <i data-lucide="arrow-right" class="w-4 h-4 ml-2 arrow-icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Silicone Seal -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden lift-and-shadow flex flex-col">
+                        <img src="https://placehold.co/600x400/1F2937/FFFFFF?text=Silicone+Seal" alt="矽膠封條" class="w-full h-48 object-cover">
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h3 class="text-xl font-bold text-primary mb-2">矽膠封條</h3>
+                            <p class="text-gray-600 mb-4 flex-grow">具備高度的密封性與優異的耐候、耐高溫特性。</p>
+                            <a href="#" class="text-accent font-bold hover:underline arrow-nudge inline-flex items-center mt-auto self-start">
+                                查看詳情 <i data-lucide="arrow-right" class="w-4 h-4 ml-2 arrow-icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Rubber Gasket -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden lift-and-shadow flex flex-col">
+                        <img src="https://placehold.co/600x400/1F2937/FFFFFF?text=Rubber+Gasket" alt="橡膠墊片" class="w-full h-48 object-cover">
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h3 class="text-xl font-bold text-primary mb-2">橡膠墊片</h3>
+                            <p class="text-gray-600 mb-4 flex-grow">優異的減震與密封性能，可依據不同壓力與環境需求客製。</p>
+                            <a href="#" class="text-accent font-bold hover:underline arrow-nudge inline-flex items-center mt-auto self-start">
+                                查看詳情 <i data-lucide="arrow-right" class="w-4 h-4 ml-2 arrow-icon"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Silicone Sheet -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden lift-and-shadow flex flex-col">
+                        <img src="https://placehold.co/600x400/FDBA74/1F2937?text=Silicone+Sheet" alt="矽膠片" class="w-full h-48 object-cover">
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h3 class="text-xl font-bold text-primary mb-2">矽膠片</h3>
+                            <p class="text-gray-600 mb-4 flex-grow">提供多種厚度、硬度與顏色選擇，適用於絕緣、緩衝等多種應用。</p>
+                            <a href="#" class="text-accent font-bold hover:underline arrow-nudge inline-flex items-center mt-auto self-start">
+                                查看詳情 <i data-lucide="arrow-right" class="w-4 h-4 ml-2 arrow-icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Featured Card: Customization -->
+                <div class="mt-12 bg-primary rounded-lg shadow-xl overflow-hidden">
+                    <div class="grid md:grid-cols-2 items-center">
+                        <div class="p-8 md:p-12 order-2 md:order-1">
+                            <h3 class="text-2xl font-bold text-white mb-3">客製化矽橡膠</h3>
+                            <p class="text-gray-300 mb-6">無論您的需求多麼特殊，我們的工程團隊都能從材料開發到成品製造，為您量身打造專屬的解決方案。我們樂於挑戰，將您的概念化為現實。</p>
+                            <a href="#" class="bg-accent text-white font-bold py-3 px-6 rounded-lg btn-press inline-flex items-center">
+                                聯絡我們討論需求 <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                            </a>
+                        </div>
+                        <div class="order-1 md:order-2 h-full">
+                            <img src="https://placehold.co/800x600/F97316/FFFFFF?text=Custom+Solution" alt="客製化解決方案" class="w-full h-full object-cover min-h-[250px]">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-primary text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <img src="../logo/YM-logo-M-noBG-WhiteWords.png" alt="詠楙企業 Logo" class="h-12 mb-4">
+                    <p class="text-gray-400 text-sm">提供最高品質的客製化彈性體解決方案，是您最信賴的合作夥伴。</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">網站導覽</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="about_orange_1.html" class="text-gray-400 hover:text-white">關於我們</a></li>
+                        <li><a href="industry_applications_orange_1.html" class="text-gray-400 hover:text-white">產業應用</a></li>
+                        <li><a href="product_categories_orange_1.html" class="text-gray-400 hover:text-white">產品類別</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">彈性體介紹</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">聯絡資訊</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li class="flex items-start"><i data-lucide="map-pin" class="w-4 h-4 mr-2 mt-1"></i><span>242新北市新莊區福營路227巷8號</span></li>
+                        <li class="flex items-start"><i data-lucide="phone" class="w-4 h-4 mr-2 mt-1"></i><span>(02) 2908-8686</span></li>
+                        <li class="flex items-start"><i data-lucide="mail" class="w-4 h-4 mr-2 mt-1"></i><span>service@yongmao.com.tw</span></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">保持聯繫</h4>
+                    <p class="text-gray-400 text-sm mb-2">訂閱以獲取最新的技術文章與資訊。</p>
+                    <div class="flex">
+                        <input type="email" placeholder="您的電子郵件" class="bg-gray-700 text-white px-3 py-2 rounded-l-md focus:outline-none w-full">
+                        <button class="bg-accent text-white px-4 rounded-r-md btn-press">訂閱</button>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center text-sm text-gray-500">
+                <p>&copy; 2024 詠楙企業股份有限公司. All Rights Reserved. | <a href="#" class="hover:underline">隱私權政策</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in-up');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.section-content').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
