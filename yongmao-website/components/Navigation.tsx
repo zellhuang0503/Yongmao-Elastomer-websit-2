@@ -41,11 +41,11 @@ export default function Navigation() {
         <div className="flex items-center justify-between">
           <Link href="/">
             <Image 
-              src="/logo/YM-logo-M-noBG-BlackWords.png" 
+              src="/logo/YM-elastomer-LOGO-white-words-1.svg" 
               alt="詠楙企業 Logo" 
-              width={60}
-              height={24}
-              className="h-6 w-auto"
+              width={84}
+              height={34}
+              className="h-[34px] w-auto"
             />
           </Link>
           <nav className="hidden md:flex items-center space-x-8">

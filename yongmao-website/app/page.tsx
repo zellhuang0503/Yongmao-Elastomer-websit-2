@@ -3,7 +3,8 @@
 import React, { useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Cpu, Settings2, ShieldCheck, Factory, Dumbbell, Cookie, Rocket, ArrowRight, MapPin, Phone, Mail, Menu } from 'lucide-react';
+import { Cpu, Settings2, ShieldCheck, Factory, Dumbbell, Cookie, Rocket, ArrowRight, Menu } from 'lucide-react';
+import { Footer } from '@/components/ui/Footer';
 
 export default function Home() {
   useEffect(() => {
@@ -161,64 +162,7 @@ export default function Home() {
         </section>
       </main>
 
-      {/* Footer */}
-      <footer className="bg-primary text-white">
-        <div className="container mx-auto px-6 py-12">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <Image 
-                src="/logo/YM-logo-M-noBG-WhiteWords.png" 
-                alt="詠楙企業 Logo" 
-                width={120}
-                height={48}
-                className="h-12 w-auto mb-4"
-              />
-              <p className="text-gray-400 text-sm">提供最高品質的客製化彈性體解決方案，是您最信賴的合作夥伴。</p>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold mb-4">網站導覽</h4>
-              <ul className="space-y-2 text-sm">
-                <li><Link href="/about" className="text-gray-400 hover:text-white">關於我們</Link></li>
-                <li><Link href="/industries" className="text-gray-400 hover:text-white">產業應用</Link></li>
-                <li><Link href="/products" className="text-gray-400 hover:text-white">產品類別</Link></li>
-                <li><Link href="/elastomer-intro" className="text-gray-400 hover:text-white">彈性體介紹</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold mb-4">聯絡資訊</h4>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li className="flex items-start">
-                  <MapPin className="w-4 h-4 mr-2 mt-1" />
-                  <span>242新北市新莊區福營路227巷8號</span>
-                </li>
-                <li className="flex items-start">
-                  <Phone className="w-4 h-4 mr-2 mt-1" />
-                  <span>(02) 2908-8686</span>
-                </li>
-                <li className="flex items-start">
-                  <Mail className="w-4 h-4 mr-2 mt-1" />
-                  <span>service@yongmao.com.tw</span>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold mb-4">保持聯繫</h4>
-              <p className="text-gray-400 text-sm mb-2">訂閱以獲取最新的技術文章與資訊。</p>
-              <div className="flex">
-                <input 
-                  type="email" 
-                  placeholder="您的電子郵件" 
-                  className="bg-gray-700 text-white px-3 py-2 rounded-l-md focus:outline-none w-full"
-                />
-                <button className="bg-accent text-white px-4 rounded-r-md btn-press">訂閱</button>
-              </div>
-            </div>
-          </div>
-          <div className="mt-8 pt-8 border-t border-gray-700 text-center text-sm text-gray-500">
-            <p>&copy; 2024 詠楙企業股份有限公司. All Rights Reserved. | <Link href="/privacy" className="hover:underline">隱私權政策</Link></p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

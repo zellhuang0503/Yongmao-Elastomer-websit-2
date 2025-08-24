@@ -18,7 +18,7 @@ const Footer: React.FC<FooterProps> = ({ className = '' }) => {
           {/* Company Info */}
           <div>
             <Image 
-              src="/logo/YM-logo-M-noBG-WhiteWords.png" 
+              src="/logo/YM-elastomer-LOGO-white-words-1.svg" 
               alt="詠楙企業 Logo" 
               width={120}
               height={48}
