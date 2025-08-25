@@ -1,14 +1,7 @@
-import product from './product'
+import blockContent from './blockContent'
 import company from './company'
 import contact from './contact'
-import blockContent from './blockContent'
+import product from './product'
+import article from './article'
 
-export const schemaTypes = [
-  // 文件類型
-  product,
-  company,
-  contact,
-  
-  // 物件類型
-  blockContent,
-]
+export const schemaTypes = [company, contact, product, article, blockContent]
