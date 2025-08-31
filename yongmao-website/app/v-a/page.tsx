@@ -1,12 +1,15 @@
-'use client';
+'use client'
 
-import React, { useEffect } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import { Cpu, Settings2, ShieldCheck, Factory, Dumbbell, Cookie, Rocket, ArrowRight, Menu } from 'lucide-react';
+import { useEffect, useState } from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
+import { Cpu, Settings2, ShieldCheck, Factory, Car, Plane, Rocket, Dumbbell, Cookie, ArrowRight } from 'lucide-react';
 import { Footer } from '@/components/ui/Footer';
 
 export default function VersionA() {
+  const [scrollY, setScrollY] = useState(0);
+  const [mouseY, setMouseY] = useState(0);
+
   useEffect(() => {
     // Intersection Observer for fade-in animation
     const observer = new IntersectionObserver((entries) => {
@@ -21,47 +24,48 @@ export default function VersionA() {
       observer.observe(section);
     });
 
-    return () => observer.disconnect();
+    // Parallax scroll effect
+    const handleScroll = () => setScrollY(window.scrollY);
+    const handleMouseMove = (e: MouseEvent) => setMouseY(e.clientY - window.innerHeight / 2);
+
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('mousemove', handleMouseMove);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
   }, []);
 
   return (
-    <div className="font-noto bg-white text-gray-700">
-      {/* Version Banner */}
-      <div className="bg-accent text-white text-center py-2 text-sm font-medium">
-        版本A - 主視覺圖片預覽
-      </div>
-
+    <div className="font-noto bg-white text-gray-700 min-h-screen">
       {/* Main Content */}
-      <main>
+      <main className="w-full">
         {/* Hero Section */}
-        <section className="bg-white text-center py-20 md:py-32">
-          <div className="container mx-auto px-6 section-content">
-            <h1 className="text-4xl md:text-6xl font-bold text-primary mb-6 leading-tight">精準工藝，定義未來彈性體標準</h1>
+        <section className="relative w-full text-center" style={{height: '100vh', overflow: 'hidden'}}>
+          <div className="absolute inset-0 z-0">
+            <div 
+              className="absolute inset-0 bg-cover bg-center bg-no-repeat w-full h-full"
+              style={{backgroundImage: `url('/a/Whisk_2mzndkwnzm.jpg')`}}
+            />
+            <div className="absolute inset-0 bg-black opacity-15"></div>
+          </div>
+          <div className="desktop-content px-6 section-content relative z-10 h-full flex flex-col justify-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight" style={{textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)'}}>精準工藝，定義未來彈性體標準</h1>
             
-            {/* Main Visual Image - Version A */}
-            <div className="mb-8">
-              <Image 
-                src="/logo/YM-full-name.png" 
-                alt="詠楙企業主視覺 (版本A)" 
-                width={320}
-                height={120}
-                className="mx-auto"
-                priority
-              />
-            </div>
-            
-            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-10 leading-relaxed">詠楙企業：您最值得信賴的高性能彈性體解決方案合作夥伴。</p>
+            <p className="text-lg md:text-xl text-white max-w-3xl mx-auto mb-10 leading-relaxed">詠楙企業：您最值得信賴的高性能彈性體解決方案合作夥伴。</p>
             
             <div className="flex flex-col sm:flex-row justify-center gap-4 max-w-md mx-auto">
               <Link href="/products" className="bg-accent text-white font-bold py-4 px-8 rounded-lg btn-press hover:bg-accent/90 transition-colors">探索解決方案</Link>
-              <Link href="/contact" className="bg-gray-200 text-primary font-bold py-4 px-8 rounded-lg btn-press hover:bg-gray-300 transition-colors">聯絡我們</Link>
+              <Link href="/contact" className="bg-white text-primary font-bold py-4 px-8 rounded-lg btn-press hover:bg-gray-100 transition-colors">聯絡我們</Link>
             </div>
           </div>
         </section>
 
         {/* Features Section */}
-        <section className="py-16 bg-subtle-bg">
-          <div className="container mx-auto px-6 section-content">
+        <section className="w-full py-16 bg-subtle-bg">
+          <div className="desktop-content px-6 section-content">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-primary">我們的核心優勢</h2>
               <p className="text-md text-gray-600 mt-2">以頂尖技術與嚴格品管，為您提供卓越產品</p>
@@ -87,8 +91,8 @@ export default function VersionA() {
         </section>
 
         {/* Industry Applications Section */}
-        <section className="py-16">
-          <div className="container mx-auto px-6 section-content">
+        <section className="w-full py-16">
+          <div className="desktop-content px-6 section-content">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-primary">產業應用</h2>
               <p className="text-md text-gray-600 mt-2">我們的產品廣泛應用於各種高要求的工業領域</p>
@@ -119,10 +123,29 @@ export default function VersionA() {
         </section>
 
         {/* Product Categories Section */}
-        <section className="py-16 bg-subtle-bg">
-          <div className="container mx-auto px-6 section-content">
+        <section className="relative w-full py-16 bg-subtle-bg overflow-hidden">
+          {/* Background Image */}
+          <div className="absolute inset-0 z-0">
+            <div 
+              className="absolute inset-0 bg-cover bg-center bg-no-repeat w-full h-full"
+              style={{
+                backgroundImage: `url('/a/Whisk_mrkmzvhmzc.jpg')`,
+                transform: `translateY(${scrollY * 0.5 + mouseY}px) translateX(${mouseY * 0.3}px)`,
+                transition: 'transform 0.1s ease-out'
+              }}
+            />
+            {/* Dark Overlay */}
+            <div 
+              className="absolute inset-0 bg-black opacity-30"
+              style={{
+                transform: `translateY(${mouseY * -0.2}px) translateX(${mouseY * -0.1}px)`,
+                transition: 'transform 0.1s ease-out'
+              }}
+            ></div>
+          </div>
+          <div className="desktop-content px-6 section-content relative z-10">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-primary">產品類別</h2>
+              <h2 className="text-3xl font-bold text-white" style={{textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)'}}>產品類別</h2>
             </div>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-white rounded-lg shadow-md overflow-hidden lift-and-shadow cursor-pointer">

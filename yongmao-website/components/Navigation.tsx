@@ -38,12 +38,12 @@ export default function Navigation() {
   }
 
   return (
-    <header className="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-gray-200">
+    <header className="bg-white/50 backdrop-blur-md sticky top-0 z-50 border-b border-gray-200">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <Link href="/">
             <Image
-              src="/logo/YM-elastomer-LOGO-white-words-1-1.svg"
+              src="/logo/YM-elastomer-LOGO-black-words-1.svg"
               alt="詠楙企業 Logo"
               width={84}
               height={34}
@@ -103,7 +103,7 @@ export default function Navigation() {
           <div className="flex justify-between items-center mb-8">
             <Link href="/">
               <Image
-                src="/logo/YM-elastomer-LOGO-white-words-1-1.svg"
+                src="/logo/YM-elastomer-LOGO-black-words-1.svg"
                 alt="詠楙企業 Logo"
                 width={84}
                 height={34}

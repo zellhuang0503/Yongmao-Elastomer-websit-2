@@ -52,10 +52,32 @@ body {
   font-family: var(--font-sans) !important;
   color: var(--foreground) !important;
   background-color: var(--background) !important;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Desktop content width - 1440螢幕下內容寬度1040px，左右各200px邊距 */
+@media (min-width: 1024px) {
+  .desktop-content {
+    max-width: 1040px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* 滿版區塊維持100%寬度 */
+  .fullwidth-section {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+  }
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-  color: var(--primary) !important;
+  color: var(--primary);
 }
 
 p, body {
