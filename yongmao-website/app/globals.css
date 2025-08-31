@@ -98,7 +98,7 @@ small, .caption {
 }
 
 .ring-accent { 
-  ring-color: var(--accent); 
+  --tw-ring-color: var(--accent); 
 }
 
 .border-accent { 
