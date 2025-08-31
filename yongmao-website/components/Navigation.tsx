@@ -43,7 +43,7 @@ export default function Navigation() {
         <div className="flex items-center justify-between">
           <Link href="/">
             <Image
-              src="/logo/YM-elastomer-LOGO-white-words-1.svg"
+              src="/logo/YM-elastomer-LOGO-white-words-1-1.svg"
               alt="詠楙企業 Logo"
               width={84}
               height={34}
@@ -103,7 +103,7 @@ export default function Navigation() {
           <div className="flex justify-between items-center mb-8">
             <Link href="/">
               <Image
-                src="/logo/YM-elastomer-LOGO-white-words-1.svg"
+                src="/logo/YM-elastomer-LOGO-white-words-1-1.svg"
                 alt="詠楙企業 Logo"
                 width={84}
                 height={34}

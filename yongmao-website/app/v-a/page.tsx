@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { Cpu, Settings2, ShieldCheck, Factory, Dumbbell, Cookie, Rocket, ArrowRight, Menu } from 'lucide-react';
 import { Footer } from '@/components/ui/Footer';
 
-export default function Home() {
+export default function VersionA() {
   useEffect(() => {
     // Intersection Observer for fade-in animation
     const observer = new IntersectionObserver((entries) => {
@@ -26,6 +26,10 @@ export default function Home() {
 
   return (
     <div className="font-noto bg-white text-gray-700">
+      {/* Version Banner */}
+      <div className="bg-accent text-white text-center py-2 text-sm font-medium">
+        版本A - 主視覺圖片預覽
+      </div>
 
       {/* Main Content */}
       <main>
@@ -34,11 +38,11 @@ export default function Home() {
           <div className="container mx-auto px-6 section-content">
             <h1 className="text-4xl md:text-6xl font-bold text-primary mb-6 leading-tight">精準工藝，定義未來彈性體標準</h1>
             
-            {/* Main Visual Image */}
+            {/* Main Visual Image - Version A */}
             <div className="mb-8">
               <Image 
                 src="/logo/YM-full-name.png" 
-                alt="詠楙企業主視覺" 
+                alt="詠楙企業主視覺 (版本A)" 
                 width={320}
                 height={120}
                 className="mx-auto"
