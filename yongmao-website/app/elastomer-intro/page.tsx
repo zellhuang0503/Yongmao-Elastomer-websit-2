@@ -5,8 +5,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Footer } from '@/components/ui/Footer';
 import { Search, ChevronDown, ArrowRight, Tag, Calendar, ArrowLeft } from 'lucide-react';
-import { client } from '@/lib/sanity';
-import { PortableText } from '@portabletext/react';
 
 interface Article {
   _id: string;
@@ -21,53 +19,10 @@ interface Article {
   content: any[];
 }
 
-async function getArticles() {
-  try {
-    return await client.fetch(`
-      *[_type == "article" && isActive == true] | order(publishedAt desc) {
-        _id,
-        title,
-        slug,
-        excerpt,
-        category,
-        featuredImage,
-        publishedAt,
-        isFeatured,
-        readingTime,
-        content
-      }
-    `);
-  } catch (error) {
-    console.error('Error fetching articles:', error);
-    return [];
-  }
-}
-
-async function getFeaturedArticle() {
-  try {
-    return await client.fetch(`
-      *[_type == "article" && isActive == true && isFeatured == true][0] {
-        _id,
-        title,
-        slug,
-        excerpt,
-        category,
-        featuredImage,
-        publishedAt,
-        readingTime,
-        content
-      }
-    `);
-  } catch (error) {
-    console.error('Error fetching featured article:', error);
-    return null;
-  }
-}
-
 export default function ElastomerIntroPage() {
   const [articles, setArticles] = useState<Article[]>([]);
   const [featuredArticle, setFeaturedArticle] = useState<Article | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     // Intersection Observer for fade-in animation
@@ -82,24 +37,6 @@ export default function ElastomerIntroPage() {
     document.querySelectorAll('.section-content').forEach(section => {
       observer.observe(section);
     });
-
-    // Fetch articles
-    const fetchArticles = async () => {
-      try {
-        const [articlesData, featuredData] = await Promise.all([
-          getArticles(),
-          getFeaturedArticle()
-        ]);
-        setArticles(articlesData);
-        setFeaturedArticle(featuredData);
-      } catch (error) {
-        console.error('Error fetching articles:', error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchArticles();
 
     return () => observer.disconnect();
   }, []);
