@@ -1,19 +1,4 @@
-// import { client } from '@/lib/sanity'
-
-// async function getContactInfo() {
-//   return await client.fetch(`
-//     *[_type == "contact" && isActive == true][0]{
-//       title,
-//       address,
-//       phone,
-//       email,
-//       isActive
-//     }
-//   `)
-// }
-
-export default async function ContactPage() {
-  // 暫時使用靜態資料，避免部署時的Sanity配置問題
+export default function ContactPage() {
   const contact = {
     title: "聯絡我們",
     address: "台灣台北市信義區信義路五段7號",
