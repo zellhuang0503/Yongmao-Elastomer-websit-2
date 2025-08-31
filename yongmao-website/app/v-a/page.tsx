@@ -91,66 +91,57 @@ export default function VersionA() {
         </section>
 
         {/* Industry Applications Section */}
-        <section className="w-full py-16">
-          <div className="desktop-content px-6 section-content">
+        <section className="relative py-16 overflow-hidden">
+          <div className="absolute inset-0 z-0">
+            <div 
+              className="absolute inset-0 bg-cover bg-center bg-no-repeat w-full h-full"
+              style={{
+                backgroundImage: `url('/a/Whisk_mrkmzvhmzc.jpg')`,
+                backgroundAttachment: 'fixed'
+              }}
+            />
+            <div className="absolute inset-0 bg-black opacity-20"></div>
+          </div>
+          <div className="desktop-content px-6 section-content relative z-10">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-primary">產業應用</h2>
-              <p className="text-md text-gray-600 mt-2">我們的產品廣泛應用於各種高要求的工業領域</p>
+              <h2 className="text-3xl font-bold text-white" style={{textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)'}}>產業應用</h2>
+              <p className="text-md text-white mt-2" style={{textShadow: '1px 1px 2px rgba(0, 0, 0, 0.5)'}}>我們的產品廣泛應用於各種高要求的工業領域</p>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 text-center">
-              <div className="p-6 bg-white border border-gray-200 rounded-lg lift-and-shadow cursor-pointer">
-                <Factory className="w-10 h-10 mx-auto text-primary mb-3" />
-                <h4 className="font-semibold text-primary">機械製造</h4>
+              <div className="p-6 bg-white/20 backdrop-blur-lg border border-white/30 rounded-lg lift-and-shadow cursor-pointer">
+                <Factory className="w-10 h-10 mx-auto text-white mb-3" />
+                <h4 className="font-semibold text-white">機械製造</h4>
               </div>
-              <div className="p-6 bg-white border border-gray-200 rounded-lg lift-and-shadow cursor-pointer">
-                <Dumbbell className="w-10 h-10 mx-auto text-primary mb-3" />
-                <h4 className="font-semibold text-primary">運動器材</h4>
+              <div className="p-6 bg-white/20 backdrop-blur-lg border border-white/30 rounded-lg lift-and-shadow cursor-pointer">
+                <Dumbbell className="w-10 h-10 mx-auto text-white mb-3" />
+                <h4 className="font-semibold text-white">運動器材</h4>
               </div>
-              <div className="p-6 bg-white border border-gray-200 rounded-lg lift-and-shadow cursor-pointer">
-                <Cookie className="w-10 h-10 mx-auto text-primary mb-3" />
-                <h4 className="font-semibold text-primary">食品製造</h4>
+              <div className="p-6 bg-white/20 backdrop-blur-lg border border-white/30 rounded-lg lift-and-shadow cursor-pointer">
+                <Cookie className="w-10 h-10 mx-auto text-white mb-3" />
+                <h4 className="font-semibold text-white">食品製造</h4>
               </div>
-              <div className="p-6 bg-white border border-gray-200 rounded-lg lift-and-shadow cursor-pointer">
-                <Cpu className="w-10 h-10 mx-auto text-primary mb-3" />
-                <h4 className="font-semibold text-primary">半導體</h4>
+              <div className="p-6 bg-white/20 backdrop-blur-lg border border-white/30 rounded-lg lift-and-shadow cursor-pointer">
+                <Cpu className="w-10 h-10 mx-auto text-white mb-3" />
+                <h4 className="font-semibold text-white">半導體</h4>
               </div>
-              <div className="p-6 bg-white border border-gray-200 rounded-lg lift-and-shadow cursor-pointer">
-                <Rocket className="w-10 h-10 mx-auto text-primary mb-3" />
-                <h4 className="font-semibold text-primary">航太配件</h4>
+              <div className="p-6 bg-white/20 backdrop-blur-lg border border-white/30 rounded-lg lift-and-shadow cursor-pointer">
+                <Rocket className="w-10 h-10 mx-auto text-white mb-3" />
+                <h4 className="font-semibold text-white">航太配件</h4>
               </div>
             </div>
           </div>
         </section>
 
         {/* Product Categories Section */}
-        <section className="relative w-full py-16 bg-subtle-bg overflow-hidden">
-          {/* Background Image */}
-          <div className="absolute inset-0 z-0">
-            <div 
-              className="absolute inset-0 bg-cover bg-center bg-no-repeat w-full h-full"
-              style={{
-                backgroundImage: `url('/a/Whisk_mrkmzvhmzc.jpg')`,
-                transform: `translateY(${scrollY * 0.5 + mouseY}px) translateX(${mouseY * 0.3}px)`,
-                transition: 'transform 0.1s ease-out'
-              }}
-            />
-            {/* Dark Overlay */}
-            <div 
-              className="absolute inset-0 bg-black opacity-30"
-              style={{
-                transform: `translateY(${mouseY * -0.2}px) translateX(${mouseY * -0.1}px)`,
-                transition: 'transform 0.1s ease-out'
-              }}
-            ></div>
-          </div>
-          <div className="desktop-content px-6 section-content relative z-10">
+        <section className="py-16 bg-subtle-bg">
+          <div className="desktop-content px-6 section-content">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-white" style={{textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)'}}>產品類別</h2>
+              <h2 className="text-3xl font-bold text-primary">產品類別</h2>
             </div>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-white rounded-lg shadow-md overflow-hidden lift-and-shadow cursor-pointer">
                 <Image 
-                  src="https://placehold.co/600x400/FDBA74/1F2937?text=O-Ring" 
+                  src="/products/Whisk_27d5868c1d.jpg" 
                   alt="O型環/墊圈" 
                   width={600}
                   height={400}
@@ -162,7 +153,7 @@ export default function VersionA() {
               </div>
               <div className="bg-white rounded-lg shadow-md overflow-hidden lift-and-shadow cursor-pointer">
                 <Image 
-                  src="https://placehold.co/600x400/FDBA74/1F2937?text=Silicone+Seal" 
+                  src="/products/Whisk_a8834f33e9.jpg" 
                   alt="矽膠封條" 
                   width={600}
                   height={400}
@@ -174,7 +165,7 @@ export default function VersionA() {
               </div>
               <div className="bg-white rounded-lg shadow-md overflow-hidden lift-and-shadow cursor-pointer">
                 <Image 
-                  src="https://placehold.co/600x400/FDBA74/1F2937?text=Rubber+Gasket" 
+                  src="/products/Whisk_8873645b70.jpg" 
                   alt="橡膠墊片" 
                   width={600}
                   height={400}
