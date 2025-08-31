@@ -138,7 +138,7 @@ export default function Home() {
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-white rounded-lg shadow-md overflow-hidden lift-and-shadow cursor-pointer">
                 <Image 
-                  src="https://placehold.co/600x400/FDBA74/1F2937?text=O-Ring" 
+                  src="/products/Whisk_27d5868c1d.jpg" 
                   alt="O型環/墊圈" 
                   width={600}
                   height={400}
@@ -150,7 +150,7 @@ export default function Home() {
               </div>
               <div className="bg-white rounded-lg shadow-md overflow-hidden lift-and-shadow cursor-pointer">
                 <Image 
-                  src="https://placehold.co/600x400/FDBA74/1F2937?text=Silicone+Seal" 
+                  src="/products/Whisk_a8834f33e9.jpg" 
                   alt="矽膠封條" 
                   width={600}
                   height={400}
@@ -162,7 +162,7 @@ export default function Home() {
               </div>
               <div className="bg-white rounded-lg shadow-md overflow-hidden lift-and-shadow cursor-pointer">
                 <Image 
-                  src="https://placehold.co/600x400/FDBA74/1F2937?text=Rubber+Gasket" 
+                  src="/products/Whisk_8873645b70.jpg" 
                   alt="橡膠墊片" 
                   width={600}
                   height={400}
