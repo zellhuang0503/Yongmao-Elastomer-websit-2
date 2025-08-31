@@ -208,7 +208,7 @@ export default function ElastomerIntroPage() {
                   
                   <div className="text-center py-8 mt-8 bg-orange-50 rounded-lg">
                     <p className="text-gray-600 text-lg mb-2">更多技術文章即將推出</p>
-                    <p className="text-gray-500 text-sm">請到 Sanity Studio 新增更多文章內容</p>
+                    <p className="text-gray-500 text-sm">敬請期待更多精彩內容</p>
                   </div>
                 </>
               )}
